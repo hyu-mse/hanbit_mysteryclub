@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨한빛추리반✨</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/img.css" type="text/css">
+</head>
+<body >
+    <div id="root">
+    </div>
+    
+</body>
+<!--react 불러오기-->
+<script
+src="https://unpkg.com/react@18/umd/react.development.js"
+crossorigin
+></script>
+<!--react dom 불러오기-->
+<script
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+crossorigin
+></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!--react code-->
+<script type="text/babel">
+    const root = document.getElementById("root");
+
+    //title
+    const Title = () => (
+        <div id="title_container">
+            <div
+                id="main_title"
+            >
+            한빛추리반
+            </div>
+            <div
+                id="semi_title">
+            - 2023년 한양대학교 신소재공학부 미리배움터 -
+            </div>
+        </div>
+    );
+
+    //question card
+    const Card = () => (
+      <div
+        className="card" id="show"
+      >
+        <div className="quiz_where">
+            [ 신소재 과방 ]
+        </div>
+        <div id="quiz_txt">
+            <p>Q .</p>
+            <p>신소재의 과방에는 다양한 물건들이 있다.'미분적분학1' 교재의 215쪽을 펼쳤을 때,아래 빈칸에 들어갈 문장은 무엇인가?(대소문자, 띄어쓰기에 주의하시오)</p>
+            <img src="image/mseroom_question.jpeg" alt="과방문제" id="mseroom_img"></img>
+        </div>
+        <input type="text" id="answer" placeholder="정확히 답을 입력하세요"></input>
+        <button
+            id="quiz_btn"
+            onClick={()=>{
+                const input = document.getElementById('answer');
+                const card = document.getElementById("show");
+                const answer = document.getElementById("hide");
+                console.log(input.value);
+                if(input.value=="kampyle of Eudoxus"){
+                    console.log("great!");
+                    card.id = "hide";
+                    answer.id = "show";
+                } else if(input.value==""){
+                } else {
+                    setTimeout(function(){
+                        input.placeholder="틀렸습니다!";
+                        input.value=null;
+                        setTimeout(function(){
+                            input.placeholder="정확히 답을 입력하세요";
+                        }, 1300);
+                    }, 1000);
+                }
+                
+            }}
+        >
+        정답입력
+        </button>
+      </div>
+    );
+
+    //question card
+    const Answer = () => (
+      <div
+        className="card" id="hide"
+      >
+        <div className="quiz_where">
+            [ 신소재 과방 ]
+        </div>
+        <div id="quiz_password">
+            <p>3</p>
+        </div>
+      </div>
+    );
+
+
+    //all container
+    const Container = () => (
+      <div id="container">
+        <Title />
+        <div id="card_container">
+            <Card />
+            <Answer />
+        </div>
+      </div>
+    );
+
+
+
+    //render container
+    ReactDOM.createRoot(root).render(<Container />);
+    
+
+
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+#sample_img{
+    width: 15rem;
+    height:15rem;
+    border-image-slice: fill;
+    margin-top:-1.5rem;
+}
+
+#mseroom_img{
+    width: 20rem;
+    height: 8rem;
+    border-image-slice: fill;
+    margin-top:-1rem;
+}
+
+#eight_img{
+    width: 10rem;
+    height: 15rem;
+    border-image-slice: fill;
+    margin-top:-1.5rem;
+}
+
+#daeun_img{
+    width: 15rem;
+    height: 15rem;
+    border-image-slice: fill;
+    margin-top:-1rem;
+}
+
+#hangwon_img{
+    width: 20rem;
+    height: 15rem;
+    border-image-slice: fill;
+    margin-top:-1rem;
+}
+
+#lion_img{
+    width: 13rem;
+    height: 15rem;
+    border-image-slice: fill;
+    margin-top:-1rem;
+}

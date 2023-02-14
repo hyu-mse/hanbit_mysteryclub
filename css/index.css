@@ -1,0 +1,115 @@
+body{
+    background-color: rgb(38, 20, 20);
+    font-family: 'ChosunCentennial';
+    -ms-overflow-style: none;   
+
+    white-space: pre-wrap;
+}
+    
+::-webkit-scrollbar {
+    display: none;
+}
+
+#container{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#title_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main_title{
+    font-family: 'EF_Firenze';
+    font-size: 3rem;
+    color: white;
+}
+
+#semi_title{
+    color: white;
+    font-size: 0.8rem;
+}
+
+#quiz{
+    font-family: 'ChosunCentennial';
+}
+
+.card{
+    margin-top: 3rem;
+    margin-bottom: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../image/oldpaper.jpeg');
+    background-size: cover;
+    background-color: blanchedalmond;
+    width: 23rem;
+    height: 30rem;
+    font-size: 2rem;
+}
+
+.quiz_where{
+    color: rgb(51, 28, 28);
+    font-size: 1rem;
+}
+
+#quiz_txt{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 20.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+#answer{
+    width: 15rem;
+    height:2.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+#quiz_btn{
+    margin-top: 0.5rem;
+    background-color: brown;
+    border-radius: 5rem;
+    height: 2.5rem;
+    width: 15rem;
+    color: white;
+    font-family: 'EF_Firenze';
+    font-size: 1.2rem;
+    border: none;
+}
+
+#hide{
+    display: none;
+}
+
+#quiz_password p{
+    margin:3rem;
+    font-size: 5rem;
+}
+
+@font-face {
+    font-family: 'EF_Firenze';
+    src:local('EF_Firenze'),
+    url('../font/EF_Firenze.eot') format('eot'),
+    url('../font/EF_Firenze.woff') format('woff'),
+    url('../font/EF_Firenze.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ChosunCentennial';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ChosunCentennial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

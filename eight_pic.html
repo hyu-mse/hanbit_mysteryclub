@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨한빛추리반✨</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/img.css">
+</head>
+<body >
+    <div id="root">
+    </div>
+    
+</body>
+<!--react 불러오기-->
+<script
+src="https://unpkg.com/react@18/umd/react.development.js"
+crossorigin
+></script>
+<!--react dom 불러오기-->
+<script
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+crossorigin
+></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!--react code-->
+<script type="text/babel">
+    const root = document.getElementById("root");
+
+    //title
+    const Title = () => (
+        <div id="title_container">
+            <div
+                id="main_title"
+            >
+            한빛추리반
+            </div>
+            <div
+                id="semi_title">
+            - 2023년 한양대학교 신소재공학부 미리배움터 -
+            </div>
+        </div>
+    );
+
+    //question card
+    const Card = () => (
+      <div
+        className="card" id="show"
+      >
+        <div className="quiz_where">
+            [ 88계단 ]
+        </div>
+        <div id="quiz_txt">
+            <p>Mission .</p>
+            <p>조원들과 협력하여<br/>아래처럼 사진을 찍으시오.<br/>(아래 예시 참고)</p>
+        </div>
+        <img src="image/eight.jpeg" alt="88계단" id="eight_img"></img>
+        
+      </div>
+    );
+
+
+    //all container
+    const Container = () => (
+      <div id="container">
+        <Title />
+        <div id="card_container">
+            <Card />
+        </div>
+      </div>
+    );
+
+
+
+    //render container
+    ReactDOM.createRoot(root).render(<Container />);
+    
+
+
+</script>
+
+</html>
